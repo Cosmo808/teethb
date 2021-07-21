@@ -14,6 +14,10 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    brushHard: 0,
+    brushSize: 0,
+    paste:0,
+    yatao: 0,
   }
 })

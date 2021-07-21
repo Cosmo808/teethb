@@ -1,12 +1,22 @@
 {
   "pages": [
-    "pages/more/more",
     "pages/home/home",
     "pages/cal/cal",
     "pages/find/find",
+    "pages/more/more",
+    "pages/find/achievement/achievement",
+    "pages/find/toothcleaner/toothcleaner",
+    "pages/find/tips/tips",
+    "pages/find/toothcleaner/yashua/yashua",
+    "pages/find/toothcleaner/yagao/yagao",
+    "pages/find/toothcleaner/beizi/beizi",
+    "pages/find/tips/tip/tip",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/more_quchi/index"
+    "pages/more_quchi/quchi",
+    "pages/more_brush/index",
+    "pages/more_zhengji/index",
+    "pages/more_paste/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
