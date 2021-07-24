@@ -14,13 +14,14 @@ Page({
     ],
 
     start_flag: false,//倒计时开始或暂停的flag，false为暂停
-    timestamp: 26,//倒计时的总共的秒数
+    timestamp: 3,//倒计时的总共的秒数
     time: '0:26',//从timestamp转换成的‘xx：xx’格式的时间，用来显示在wxml页面
     textValue: 0,
 
     brush_state: 0,//表示刷牙的位置状态
-    bursh_time: [26,27,27,27,27,27,27],//不同位置的刷牙时间
+    bursh_time: [26,26,32,32,32,32,32],//不同位置的刷牙时间
     brush_mode: 0,//刷牙模式，0表示成人模式，1表示儿童模式
+    title_change: [1,1,1,1,1,1],//标题修改，1表示外侧，2表示咬合，3表示内侧，4表示远端
   },
 
   myFunc() {
@@ -75,7 +76,7 @@ Page({
     console.log("reset")
     //监测是否双击
     // 获取这次点击时间
-    var thisTime = e.timeStamp;
+    var thisTime = e.timestamp;
     // 获取上次点击时间 默认为0
     var lastTime = this.data.lastTime;
     if (lastTime != 0) {
@@ -110,7 +111,7 @@ Page({
   timer: function () {
     if(this.data.brush_state == 6){
       this.setData({
-        brush_state: 0
+        brush_state: 0,
       })
       this.reset()
     }
@@ -121,9 +122,12 @@ Page({
             timestamp: this.data.timestamp - 1,
             time: this.time_change(this.data.timestamp - 1)
           })
+          this.title_change_fun()//根据时间修改刷牙标题
+          console.log(Math.ceil(this.data.brush_state/2)==Math.floor(this.data.brush_state/2))
           if (this.data.timestamp == 0) {//如果时间为0，重置数据
             this.setData({
-              brush_state: this.data.brush_state+1
+              brush_state: this.data.brush_state+1,
+              title_change: [1,1,1,1,1,1]
             })
             this.setData({
               timestamp: this.data.bursh_time[this.data.brush_state],
@@ -140,6 +144,36 @@ Page({
     promise.then((setTimer) => {
       clearInterval(setTimer)
     })
+  },
+
+  //根据时间修改刷牙标题
+  title_change_fun() {
+    var t_=this.data.timestamp
+    var t=this.data.bursh_time[this.data.brush_state]-t_ //t表示过了多长时间
+  
+    if(this.data.brush_state==0 || this.data.brush_state==1){//刷门牙时
+      if(t>10 && t<=14){
+        this.data.title_change[this.data.brush_state]=2
+      }
+      if(t>14){
+        this.data.title_change[this.data.brush_state]=3
+      }
+    }
+    else{//刷侧牙时
+      if(t>10 && t<=14){
+        this.data.title_change[this.data.brush_state]=2
+      }
+      if(t>14 && t<=26){
+        this.data.title_change[this.data.brush_state]=3
+      }
+      if(t>26){
+        this.data.title_change[this.data.brush_state]=4
+      }
+    }
+    this.setData({
+      title_change: this.data.title_change
+    })
+    console.log(this.data.title_change)
   },
 
   model_switch: function() {
@@ -177,7 +211,7 @@ Page({
 
   //修改刷牙时间
   change_time() {
-    
+
   },
 
   //取消事件

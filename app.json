@@ -1,5 +1,6 @@
 {
   "pages": [   
+    "pages/home/home",
     "pages/cal/cal",
 
     "pages/more/more",
@@ -20,7 +21,7 @@
 
 
     
-    "pages/home/home",
+    
     "pages/find/find",
     "pages/more/zhengji/index",
     "pages/more/remind/index",

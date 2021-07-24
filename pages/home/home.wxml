@@ -11,7 +11,13 @@
           <switch checked="{{model_switch}}" bindchange="model_switch"/>
       </view>
       </view>
-      <text class="title">开始刷牙吧！</text>
+      <text class="title">
+        <text>{{brush_state%2 == 0? '上':'下'}}颌牙齿</text>
+        <text wx:if="{{title_change[brush_state]==1}}">外侧面</text>
+        <text wx:if="{{title_change[brush_state]==2}}">咬合面</text>
+        <text wx:if="{{title_change[brush_state]==3}}">内侧面</text>
+        <text wx:if="{{title_change[brush_state]==4}}">远端面</text>
+      </text>
     </view>
     <image class="teeth" src="https://z3.ax1x.com/2021/07/21/Waq45d.png" wx:if="{{brush_state == 0}}"></image>
     <image class="teeth" src="https://z3.ax1x.com/2021/07/21/Waqo8I.png" wx:if="{{brush_state == 1}}"></image>
