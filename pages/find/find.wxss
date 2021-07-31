@@ -1,0 +1,81 @@
+/* pages/find/find.wxss */
+page {  
+  display: block;  
+  min-height: 100%;  
+  background-color: rgb(240, 243, 252);  
+}
+.contain {
+  padding: 0rpx;
+  margin: 30rpx;
+}
+.block {
+  background-color: rgb(255, 255, 255);
+  border-radius: 30rpx;
+}
+.gap {
+  height:30rpx;
+}
+.head {
+  width: 650rpx;
+  height: 80rpx;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.headImg {
+  width:60rpx;
+  height: 60rpx;
+}
+.headTitle {
+  width:440rpx;
+  height:40rpx;
+  margin-left:15rpx;
+  margin-bottom: 20rpx;
+  display:flex;
+  align-items: left;
+  font-weight: 700;
+  font-size: 45rpx;
+  color: rgb(73,80,96);
+}
+.rightArrow {
+  width:50rpx;
+  height: 50rpx;
+  position: relative;
+  left: 80rpx;
+}
+.divLine{
+  background: rgb(240, 243, 252);
+  width: 85%;
+  position: absolute;
+  right:0rpx;
+  height: 4rpx; 
+}
+.listElement {
+  width: 550rpx;
+  height: 90rpx;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.listElement2 {
+  width: 550rpx;
+  height: 70rpx;
+  margin-left: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.listImg {
+  width:60rpx;
+  height: 60rpx;
+}
+.listTitle {
+  font-size: 35rpx;
+  color: rgb(73,80,96);
+}
+.listTitle2 {
+  font-size: 25rpx;
+  color: rgb(73,80,96);
+}

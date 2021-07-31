@@ -1,0 +1,92 @@
+/* pages/more_paste/index.wxss */
+page{
+  background-color: #2A6DBE;
+}
+
+.pagecontain{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top:60rpx;
+  text-align: center;
+
+}
+
+.intro{
+  margin-bottom: 60rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.title{
+  width:400rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  margin:20rpx 175rpx 20rpx 175rpx;
+  background-color: #D6E7F2;
+  color: #2A6DBE;
+  text-align: center;
+  border-radius: 10px;
+  border: 10rpx solid #D6E7F2;
+  font-weight: bold;
+  font-size: larger;
+}
+.label{
+  color:white;
+  font-size: large;
+  margin:0 10rpx 0 10rpx;
+}
+
+.label2{
+  color:white;
+  font-size: large;
+  margin:0 10rpx 0 10rpx;
+}
+
+.item{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 550rpx;
+  height: 120rpx;
+  border-radius: 20rpx;
+  margin-bottom: 35rpx;
+  color: white;
+  background-color: #498ED1;
+  margin-left: 100rpx;
+  margin-right: 100rpx;
+  font-size: large;
+}
+
+.item_highlight{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 550rpx;
+  height: 120rpx;
+  border-radius: 20rpx;
+  margin-bottom: 35rpx;
+  color: #2A6DBE;
+  background-color: #D6E7F2;
+  margin-left: 100rpx;
+  margin-right: 100rpx;
+  font-size: large;
+}
+
+.myicon{
+  width: 70rpx;
+  color: white;
+  margin: 0 20rpx 0 40rpx
+}
+
+
+.bttn{
+  margin-top: 110rpx !important;
+  width: 180rpx !important;
+  color: #2A6DBE !important;
+  font-size: large !important;
+}
+
+
