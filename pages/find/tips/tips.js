@@ -65,27 +65,27 @@ Page({
   },
   toTip1(){
     wx.navigateTo({
-      url: 'tip/tip?index=' + 0,
+      url: 'tip1/tip1',
     })
   },
   toTip2(){
     wx.navigateTo({
-      url: 'tip/tip?index=' + 1,
+      url: 'tip2/tip2',
     })
   },
   toTip3(){
     wx.navigateTo({
-      url: 'tip/tip?index=' + 2,
+      url: 'tip3/tip3',
     })
   },
   toTip4(){
     wx.navigateTo({
-      url: 'tip/tip?index=' + 3,
+      url: 'tip4/tip4',
     })
   },
   toTip5(){
     wx.navigateTo({
-      url: 'tip/tip?index=' + 4,
+      url: 'tip5/tip5',
     })
   },
 })

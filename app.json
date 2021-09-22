@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/register/register0/index",
     "pages/register/register",
     "pages/register/register1/register1",
     "pages/register/register2/register2",
@@ -8,6 +9,7 @@
     "pages/home/result/index",
     "pages/cal/cal",
     "pages/find/find",
+    "pages/find/achievement/rank/rank",
     "pages/find/achievement/achievement",
     "pages/find/toothcleaner/toothcleaner",
     "pages/find/tips/tips",
